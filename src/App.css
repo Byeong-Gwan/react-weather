@@ -1,0 +1,79 @@
+body {
+    background: url("https://static9.depositphotos.com/1593759/1168/i/450/depositphotos_11687543-stock-photo-the-sun-above-the-horizon.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+}
+
+.weather-box {
+    width: 100%;
+    max-width: 420px;
+    padding: 24px 20px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    backdrop-filter: saturate(140%) blur(4px);
+}
+
+/* Typography in the weather card */
+.weather-box > div:first-child {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #222;
+}
+
+.weather-box h2 {
+    margin: 8px 0 4px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111;
+}
+
+.weather-box h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #444;
+}
+
+/* Button group layout */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    max-width: 520px;
+}
+
+.button-group .btn {
+    flex: 1 1 auto;
+    min-width: 140px;
+    font-weight: 600;
+}
+
+/* Mobile tweaks */
+@media (max-width: 480px) {
+    .weather-box {
+        padding: 20px 16px;
+        border-radius: 14px;
+    }
+    .weather-box h2 {
+        font-size: 1.75rem;
+    }
+    .button-group .btn {
+        min-width: 46%;
+    }
+}

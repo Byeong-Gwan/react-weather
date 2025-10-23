@@ -1,17 +1,22 @@
-# React + Vite
+# Weather React 
+## 1. 앱 실행 시 현재 위치기반 날씨 노출
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- weather API 사용 
+  - https://openweathermap.org/ 계정 생성 하여 사용
+  - json 형식의 데이터 조회 후 필요한 데이터 사용
+## 2. 날씨 정보에는 도시, 섭씨, 화씨 날씨 상태
+- 현재 날씨 데이터 조회 섭씨 데이터 가져옴 url 뒤에 추가 &units=metric
+- 화씨는 계산 
+    ``` javascript
+    const fahrenheit = Math.floor(((weather?.main.temp * 9/5) + 32) * 100) / 100;
+  ```
+    
+## 3. 5개의 버튼 (1개는 현재위치, 4개는 다른 도시)
+- 날씨 조회 원하는 나라 선정
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# react-weather
+## 4. 도시 버튼 클릭 시 도시별 날씨 노출 (미완료)
+## 5. 현재 위치 버튼 클릭 시 다시 현위치 기반 날씨 노출 (미완료)
+## 6. 데이터를 들고오는 동안 로딩 스피너 누출 (미완료)
+## 선택. 초기 이미지 및 날씨별 이미지 노출(선택) (미완료)
